@@ -1,0 +1,45 @@
+{
+  "name": "nexusnights-intelligence-engine",
+  "version": "0.1.0",
+  "description": "NexusNights Intelligence Engine backend wired to local Ollama.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nexusnights",
+    "ollama",
+    "short-term-rental",
+    "intelligence-engine"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+{
+  "name": "nexusnights-backend-utility-driver",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^1.35.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.576.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
