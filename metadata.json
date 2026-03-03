@@ -1,0 +1,7 @@
+{
+  "name": "NexusNights Intelligence Engine",
+  "description": "A high-intensity PropTech architect for identifying 'Arbitrage Gems' in the Short-Term Rental (STR) market using the Nexus Alpha scoring system.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
