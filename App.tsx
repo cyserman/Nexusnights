@@ -833,13 +833,43 @@ const App: React.FC = () => {
 
             <div className="space-y-12">
               {[
-                { key: 'yield_gap', label: 'Yield Gap', color: '#38E8C6', desc: 'Revenue vs Comps' },
-                { key: 'aesthetic_debt', label: 'Aesthetic Debt', color: '#2E5BFF', desc: 'Photo/Decor Quality' },
-                { key: 'amenity_arbitrage', label: 'Amenity Arbitrage', color: '#FF2E5B', desc: 'Missing ROI Features' },
-                { key: 'pricing_inefficiency', label: 'Pricing Inefficiency', color: '#2EFFD4', desc: 'High Occ / Low ADR' },
-                { key: 'review_velocity', label: 'Review Velocity', color: '#FFD42E', desc: 'Host Engagement' }
+                {
+                  key: 'yield_gap',
+                  label: 'Yield Gap',
+                  color: '#38E8C6',
+                  desc: 'Revenue vs Comps',
+                  tooltip: 'How far this listing is underpriced versus the top comps in its micro-neighborhood. Higher weight = prioritize properties with the biggest revenue gap.'
+                },
+                {
+                  key: 'aesthetic_debt',
+                  label: 'Aesthetic Debt',
+                  color: '#2E5BFF',
+                  desc: 'Photo/Decor Quality',
+                  tooltip: 'How “ugly but fixable” the asset is: dated photos, bad lighting, weak staging. Higher weight = favor ugly listings with strong bones.'
+                },
+                {
+                  key: 'amenity_arbitrage',
+                  label: 'Amenity Arbitrage',
+                  color: '#FF2E5B',
+                  desc: 'Missing ROI Features',
+                  tooltip: 'How much upside you get by adding high-ROI amenities (hot tub, EV charger, king beds, workspace, coffee bar).'
+                },
+                {
+                  key: 'pricing_inefficiency',
+                  label: 'Pricing Inefficiency',
+                  color: '#2EFFD4',
+                  desc: 'High Occ / Low ADR',
+                  tooltip: 'Signals hosts who are “leaving money on the table”: high occupancy but below-market nightly rate.'
+                },
+                {
+                  key: 'review_velocity',
+                  label: 'Review Velocity',
+                  color: '#FFD42E',
+                  desc: 'Host Engagement',
+                  tooltip: 'How “awake” the host is: fresh reviews, consistent responses. Lower velocity can mean takeover opportunity; weight this if you care about operational friction.'
+                }
               ].map(item => (
-                <div key={item.key} className="space-y-4">
+                <div key={item.key} className="space-y-4" title={item.tooltip}>
                   <div className="flex justify-between items-end">
                     <div>
                       <div className="text-[11px] font-black uppercase tracking-widest" style={{ color: item.color }}>{item.label}</div>
